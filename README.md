@@ -21,16 +21,31 @@ You may used these credentials to login:
 - Admin: admin@rakaya.sa / Password1234!
 - User:  user@rakaya.sa / Password1234!
 
+## Side Notes
+
+- This projects is aimed to showcase my abilities and coding style, thus as little as possible third-party packages are
+  used.
+- The database tables are simplified and not normalized to keep the project simple.
+    - For example, the `books` table should have a relationship with a separate table for `authors`.
+- I've implemented a simplified roles and permissions from scratch that is based on my understanding of
+  `spatie/laravel-permission` (which I prefer to use in real projects).
+
 ## TODO
 
 ### - Database Design
 
-- [ ] Design base models and migrations.
+- [x] Design base models and migrations.
     - **Start**: 10/20/2024 10:11
-    - **End**: in-progress
-- [ ] Establish a morph relationship between relevant entities, such as users and borrowed books.
-    - **Start**:
-    - **End**:
+    - **End**: 10/20/2024 11:11
+    - **Details**:
+        - [x] `users`
+        - [x] `roles`
+        - [x] `permissions`
+        - [x] `role_has_permissions`
+        - [x] ~~model_has_roles~~ `user_has_roles`
+        - [x] `books`
+        - [x] Establish a morph relationship between relevant entities, such as users and borrowed books.
+        - [x] `borrwables`
 
 ### - Authentication
 
@@ -43,12 +58,12 @@ You may used these credentials to login:
 
 ### - Role & Permission Management
 
-- [ ] Implement RBAC with at least two roles (e.g., admin and regular user).
-    - **Start**:
-    - **End**:
-- [ ] Define permissions for adding, editing, and deleting books.
-    - **Start**:
-    - **End**:
+- [x] Implement RBAC with at least two roles (e.g., admin and regular user).
+    - **Start**: 10/20/2024 10:40
+    - **End**: 10/20/2024 11:11
+- [x] Define permissions for adding, editing, and deleting books.
+    - **Start**: 10/20/2024 10:21
+    - **End**: 10/20/2024 11:11
 
 ### - Blade Components
 
